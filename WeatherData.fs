@@ -2,7 +2,7 @@ namespace Uppgift6
 
 open System
 
-type WeatherForecast =
+type WeatherData =
     { Date: DateTime
       TemperatureC: float
       Timestamp: int }

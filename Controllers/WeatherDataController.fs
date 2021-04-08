@@ -12,11 +12,11 @@ open Uppgift6
 
 [<ApiController>]
 [<Route("[controller]")>]
-type WeatherForecastController (logger : ILogger<WeatherForecastController>) =
+type WeatherDataController (logger : ILogger<WeatherDataController>) =
     inherit ControllerBase()
 
     [<HttpGet>]
-    member __.Get() : WeatherForecast[] =
+    member __.Get() : WeatherData[] =
         let csvLines = File.ReadAllLines(@"temperatures.csv")
         let csvData =
             query {
